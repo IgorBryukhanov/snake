@@ -13,7 +13,7 @@ namespace snake
             Console.SetWindowSize(80, 25);
             Console.SetBufferSize(80, 25);
 
-            
+
             // Отрисовка рамки
             HorisontalLine upLine = new HorisontalLine(0, 78, 0, '+');
             HorisontalLine downLine = new HorisontalLine(0, 78, 24, '+');
@@ -25,11 +25,13 @@ namespace snake
             rightLine.Draw();
 
             //Отрисовка точек
-              
-            Point p = new Point(4, 5, '*');
-            p.Draw();
 
-            Console.ReadLine();
+            Point p = new Point(4, 5, '*');
+            Snake snake = new Snake(p, 4, Direction.RIGHT);
+            snake.Draw();
         }
+
     }
+
 }
+
